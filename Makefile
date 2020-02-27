@@ -43,7 +43,7 @@ clean:  ## remove all build, test and Python artifacts
 	find . -name '__pycache__' -exec rm -fr {} +
 
 lint:  ## Check for python formatting issues via black & flake8
-	@black . --check && flake8 .
+	@black . --check && flake8 ./rispy && flake8 ./tests
 
 format:  ## Modify python code using black & show flake8 issues
 	@black . && flake8 .
